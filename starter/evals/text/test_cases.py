@@ -98,7 +98,7 @@ cases: List[Case[List[TextInput], TextModerationResult, Any]] = [
             # Use judge model to evaluate if the rationale makes sense
             LLMJudge(
                 model=judge_model,
-                rubric="The rationale should explain why the text is professional and friendly, with no safety flags raised."
+                rubric="The rationale should explain why the text is professional and friendly, with no safety flags raised.",
                 include_input=True, 
             ),
         ),
