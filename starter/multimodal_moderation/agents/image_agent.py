@@ -40,11 +40,9 @@ async def moderate_image(
     media_type: str
 ) -> ImageModerationResult:
 
-    # TODO: Create a BinaryContent object with data=image_source and media_type=media_type
+    
     image_input = BinaryContent(data=image_source, media_type=media_type)
 
-    # TODO: Run the image_moderation_agent with a list containing a prompt and image_input,
-    #       then return result.output
     # NOTE: in the class we used agent.run_sync but here we need to use
     #       await agent.run since this is an async function. They work exactly
     #       the same. Just do:

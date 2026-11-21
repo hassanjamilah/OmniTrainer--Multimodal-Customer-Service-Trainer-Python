@@ -32,7 +32,6 @@ class VideoModerationResult(ModerationResult):
     is_low_quality: bool = Field(description="Whether the video is low quality")
 
 
-# TODO: Create AudioModerationResult class that inherits from ModerationResult and contains:
 #   - transcription: str to contain the transcription of the audio
 #   - contains_pii: bool to contain a flag for whether the audio contains any personally-identifiable
 #       information (PII) such as names, addresses, phone numbers

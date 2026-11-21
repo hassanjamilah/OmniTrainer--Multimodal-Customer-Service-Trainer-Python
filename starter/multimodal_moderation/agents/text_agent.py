@@ -30,7 +30,6 @@ Provide a detailed rationale for your choices as well as a confidence score betw
 """
 
 
-# TODO: Create a Pydantic AI Agent with:
 #   - instructions=MODERATION_INSTRUCTIONS
 #   - output_type=TextModerationResult
 # Hint: Agent is already imported from pydantic_ai
@@ -42,8 +41,6 @@ text_moderation_agent = Agent(
 
 async def moderate_text(model_choice: ModelChoice, text: str) -> TextModerationResult:
 
-    # TODO: Run the text_moderation_agent with a prompt containing the text,
-    #       then return result.output
     # NOTE: in the class we used agent.run_sync but here we need to use
     #       await agent.run since this is an async function. They work exactly
     #       the same. Just do:
