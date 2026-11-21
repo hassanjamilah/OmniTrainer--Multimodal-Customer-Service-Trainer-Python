@@ -1,7 +1,6 @@
 from pydantic_ai import Agent
 from pydantic_ai.models.google import GoogleModel, GoogleModelSettings
-from pydantic_ai.providers.google import GoogleProvider
-from multimodal_moderation.env import GEMINI_API_KEY, DEFAULT_GOOGLE_MODEL
+from multimodal_moderation.env import DEFAULT_GOOGLE_MODEL, get_google_provider
 
 
 ACME_SYSTEM_PROMPT = """
@@ -24,7 +23,7 @@ agent is polite and professional, you will gradually calm down.
 Keep your responses short and concise.
 """
 
-gemini_model = GoogleModel(DEFAULT_GOOGLE_MODEL, provider=GoogleProvider(api_key=GEMINI_API_KEY))
+gemini_model = GoogleModel(DEFAULT_GOOGLE_MODEL, provider=get_google_provider())
 model_settings = GoogleModelSettings(google_thinking_config={"thinking_budget": 0})
 
 customer_agent = Agent(
